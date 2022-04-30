@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.button {
+  background: #4b51ef;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.button-profile {
+  float: right;
+  background: #52cf4f;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -85px;
+  margin-top: 180px;
+  &__disabled {
+    position: absolute;
+    float: right;
+    background: #afafaf;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    border: none;
+    margin-left: -85px;
+    margin-top: 180px;
+  }
+}
+
+.preloader{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px dashed #4B51EF;
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(1)
+  }
+  to{
+    transform: rotate(360deg) scale(1.2)
+  }
+}
+
+.input {
+  padding: 5px 10px;
+  width: 211px;
+  height: 22px;
+  border: 1px solid #d8d8d8;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+  border-radius: 5px;
+  outline: none;
+}
+
+.error {
+  border: 1px solid #ff0000;
+  padding: 5px 10px;
+  width: 211px;
+  height: 22px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+  border-radius: 5px;
+  outline: none;
+  &__text {
+    position: absolute;
+    font-size: 8px;
+    color: red;
+  }
+}
+
+.textarea {
+  padding: 5px 10px;
+  width: 420px;
+  height: 55px;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+  overflow: auto;
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    color: #000000;
+  }
+}
+
+.users-list {
+  &__cont{
+    width: 438px;
+  }
+  &__inner {
+    margin-top: 19px;
+    margin-left: 31px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  &__list {
+    margin-top: 15px;
+  }
+}
+
+.container {
+  // width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 152px;
+  background: #bdbdbd;
+  height: 100%;
+  &__inner {
+    padding: 35px 0 0 20px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+  }
+  &__btn {
+    margin-top: 10px;
+  }
+}
+
+.list {
+  width: 420px;
+  height: 73px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  &__text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  &__text span {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #a3a3a3;
+  }
+  &__info {
+    padding: 10px;
+  }
+  &__btn {
+    margin-top: -24px;
+    margin-right: 10px;
+    float: right;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4b51ef;
+    cursor: pointer;
+  }
+}
+
+.profile-user {
+  &__inner {
+    margin-top: 19px;
+    margin-left: 31px;
+    position: relative;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input-title {
+    margin-bottom: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    color: #000000;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  &__box {
+    margin-top: 10px;
+    width: 438px;
+    height: 463px;
+    border: 1px solid #f3f3f3;
+    border-radius: 8px;
+  }
+  &__form {
+    margin-left: 12px;
+  }
+  &__input:first-child {
+    margin-top: 20px;
+  }
+  &__input {
+    margin-top: 10px;
+  }
+  &__list {
+    margin-top: 15px;
+  }
+}
