@@ -41,7 +41,7 @@ code {
   cursor: pointer;
   position: absolute;
   margin-left: -85px;
-  margin-top: 180px;
+  margin-top: 110px;
   &__disabled {
     position: absolute;
     float: right;
@@ -54,7 +54,7 @@ code {
     color: #ffffff;
     border: none;
     margin-left: -85px;
-    margin-top: 180px;
+    margin-top: 110px;
   }
 }
 
@@ -104,6 +104,8 @@ code {
   &__text {
     position: absolute;
     font-size: 8px;
+    padding-top: 2px;
+    left: 145px;
     color: red;
   }
 }
@@ -249,12 +251,12 @@ code {
   &__form {
     margin-left: 12px;
   }
-  &__input:first-child {
-    margin-top: 20px;
-  }
-  &__input {
+  &__input-card:first-child {
     margin-top: 10px;
   }
+  // &__input-card {
+  //   margin-top: 10px;
+  // }
   &__list {
     margin-top: 15px;
   }

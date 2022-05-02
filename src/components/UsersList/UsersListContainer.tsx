@@ -1,31 +1,27 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { IUsers } from '../../types/types'
+import React, { useState } from 'react'
+import { IUserProps } from '../../types/types'
 import Preloader from '../../UI/Preloader'
 import UsersList from './UsersList'
+import { UsersListCont } from '../styles'
 
-const UsersListContainer: React.FC = () => {
-    const [users, setUsers] = useState<IUsers[]>([])
+type Props = IUserProps & {}
+
+const UsersListContainer: React.FC<Props> = ({ ...usersProps }) => {
+
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-        axios.get<IUsers[]>('https://jsonplaceholder.typicode.com/users?_page=1&_limit=10')
-            .then((response) => {
-                // console.log(response.data)
-                setUsers(response.data)
-            })
-        setTimeout(() => {
-            setIsLoading(true)
-        }, 700)
-    }, [])
+    setTimeout(() => {
+        setIsLoading(true)
+    }, 700)
+
     return (
-        <div className="users-list__cont">
+        <UsersListCont>
             {
                 !isLoading
                     ? <Preloader />
-                    : <UsersList users={users}/>
+                    : <UsersList {...usersProps} />
             }
-        </div>
+        </UsersListCont>
     )
 }
 

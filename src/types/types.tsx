@@ -24,3 +24,17 @@ export interface IUserProfile {
     phone: string | number;
     website: string;
 }
+
+export interface IUserProps {
+    users: IUsers[]; 
+    setUsers: React.Dispatch<React.SetStateAction<IUsers[]>>
+    headers?: headers[]
+    sortedData: () => IUsers[]
+}
+
+export interface headers { 
+    id: number; 
+    key: keyof IUsers; 
+    label: string; 
+}
+
